@@ -26,11 +26,23 @@ export default function AdminNav({ email }: { email: string }) {
 
   return (
     <div className="border-b hairline bg-onyx">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-8 gap-y-3 px-5 py-4 lg:px-8">
-        <p className="font-display text-sm tracking-[0.25em] text-gold uppercase">
-          Josam Admin
-        </p>
-        <nav className="flex flex-wrap items-center gap-x-6 gap-y-2">
+      <div className="mx-auto max-w-7xl px-5 py-4 lg:px-8">
+        <div className="flex items-center justify-between gap-4">
+          <p className="font-display text-sm tracking-[0.25em] text-gold uppercase">
+            Josam Admin
+          </p>
+          <div className="flex items-center gap-4">
+            <span className="hidden text-xs text-sand sm:block">{email}</span>
+            <button
+              type="button"
+              onClick={signOut}
+              className="text-xs tracking-[0.15em] text-sand uppercase transition-colors hover:text-gold"
+            >
+              Sign out
+            </button>
+          </div>
+        </div>
+        <nav className="mt-3 flex flex-wrap items-center gap-x-6 gap-y-2 border-t hairline pt-3">
           {nav.map((n) => (
             <Link
               key={n.href + n.label}
@@ -41,16 +53,6 @@ export default function AdminNav({ email }: { email: string }) {
             </Link>
           ))}
         </nav>
-        <div className="ml-auto flex items-center gap-4">
-          <span className="hidden text-xs text-sand sm:block">{email}</span>
-          <button
-            type="button"
-            onClick={signOut}
-            className="text-xs tracking-[0.15em] text-sand uppercase transition-colors hover:text-gold"
-          >
-            Sign out
-          </button>
-        </div>
       </div>
     </div>
   );
