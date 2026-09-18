@@ -93,15 +93,23 @@ export default async function HomePage() {
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="relative flex min-h-[82svh] items-end overflow-hidden lg:min-h-svh">
         <div className="absolute inset-0">
-          <Image
-            src={heroImage}
-            alt="Premium SUV at Josam Auto Company"
-            fill
-            priority
-            quality={85}
-            sizes="100vw"
-            className="object-cover"
-          />
+          <picture>
+            <source
+              media="(max-width: 1023px)"
+              srcSet="/_next/image?url=%2Fimages%2Frange-rover-hero-mobile.webp&w=640&q=85 640w, /_next/image?url=%2Fimages%2Frange-rover-hero-mobile.webp&w=828&q=85 828w, /_next/image?url=%2Fimages%2Frange-rover-hero-mobile.webp&w=1080&q=85 1080w"
+              sizes="100vw"
+            />
+            <Image
+              src={heroImage}
+              alt="Premium SUV at Josam Auto Company"
+              fill
+              loading="eager"
+              fetchPriority="high"
+              quality={85}
+              sizes="100vw"
+              className="object-cover"
+            />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
         </div>
