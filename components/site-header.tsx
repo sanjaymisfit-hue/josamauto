@@ -151,6 +151,12 @@ export default function SiteHeader() {
             <IconPhone size={15} />
             Call Us
           </a>
+          <Link
+            href="/admin/login"
+            className="block text-center text-[10px] tracking-[0.3em] text-sand/40 uppercase transition-colors hover:text-gold"
+          >
+            Admin
+          </Link>
         </div>
       </div>
     </>
