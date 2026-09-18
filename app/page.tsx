@@ -17,7 +17,7 @@ import {
   IconWhatsApp,
 } from "@/components/icons";
 
-const heroImage = "/images/range-rover-hero-opt.webp";
+const heroImage = "/images/range-rover-hero-2k.webp";
 
 export const revalidate = 60;
 
@@ -91,13 +91,14 @@ export default async function HomePage() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="relative flex min-h-svh items-end overflow-hidden">
+      <section className="relative flex min-h-[82svh] items-end overflow-hidden lg:min-h-svh">
         <div className="absolute inset-0">
           <Image
             src={heroImage}
             alt="Premium SUV at Josam Auto Company"
             fill
             priority
+            quality={85}
             sizes="100vw"
             className="object-cover"
           />
