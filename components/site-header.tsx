@@ -96,7 +96,7 @@ export default function SiteHeader() {
               className="btn-gold !py-2.5 !px-5"
             >
               <IconWhatsApp size={14} />
-              Concierge
+              WhatsApp
             </a>
           </nav>
 
@@ -142,7 +142,7 @@ export default function SiteHeader() {
             className="btn-gold w-full"
           >
             <IconWhatsApp size={15} />
-            WhatsApp Concierge
+            Chat on WhatsApp
           </a>
           <a
             href="tel:+254116011711"

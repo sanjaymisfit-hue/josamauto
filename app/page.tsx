@@ -146,7 +146,7 @@ export default async function HomePage() {
                 className="btn-outline"
               >
                 <IconWhatsApp size={15} />
-                Concierge on WhatsApp
+                Chat on WhatsApp
               </a>
             </div>
           </Reveal>
